@@ -1,0 +1,99 @@
+GET /DriverFetchBuyers?route_id=5 HTTP/1.1
+Host: {{host}}:{{port}}
+
+###
+GET /Media?filename=reqq.py HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+GET /Payments?buyers=9,10 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+POST /AddPayments?ids=49,50&bal=250&buyer=10 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+POST /UpdatePayments?group_ids=5 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+GET /BuyerPrices?buyer_id=167;select 2+2 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+GET /AddBuyerPrice?i_id=251?&b_id=166?&price=18&cate=8 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+POST /UpdateBuyerPrice?id=1&price=24 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+
+###
+
+GET /DriverFetchBuyers?route_id=5 HTTP/1.1
+Host: {{localhost}}:{{port}}
+
+###
+GET /DriverServeMedia?filename=req.py HTTP/1.1
+Host: {{localhost}}:{{port}}
+Connection: close
+
+###
+
+POST /AddInvoice?ids=179,180 HTTP/1.1
+Host: {{localhost}}:{{port}}
+Content-Type: application/x-www-form-urlencoded
+Connection: close
+
+###
+
+GET /sale_item_priority HTTP/1.1
+Host:{{host}}:{{port}}
+Connection: close
+Accept: application/json
+
+###
+
+POST /add_sale_item_priority HTTP/1.1
+Host:{{host}}:{{port}}
+Connection: close
+Content-Type: application/json
+
+[
+  {
+    "id": -1,
+    "item_id": 345,
+    "priority": 10
+  }
+]
+
+###
+
+GET /BuyerPrices?buyer_id=166 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+Content-Type: application/json
+
+###
+
+GET /salegroup_invoices?ids=20,22,25,26 HTTP/1.1
+Host: {{host}}:{{port}}
+Connection: close
+Content-Type: application/json
+
+###
+
